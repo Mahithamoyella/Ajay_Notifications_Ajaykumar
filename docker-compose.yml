@@ -10,10 +10,10 @@ services:
     environment:
       - PG_HOST=postgres
       - PG_USER=postgres
-      - PG_PASSWORD=admin123
+      - PG_PASSWORD=admin834
       - PG_DATABASE=new_employee_db
       - PG_PORT=5432
-      - PORT=3601
+      - PORT=3062
     depends_on:
       - postgres
     networks:
@@ -28,7 +28,7 @@ services:
       context: ./Frontend
       dockerfile: Dockerfile
     ports:
-      - "7102:80"
+      - "8074:80"
     networks:
       - app-network
     volumes:
@@ -40,7 +40,7 @@ services:
       context: ./Hr_page
       dockerfile: Dockerfile
     ports:
-      - "7103:80"
+      - "8075:80"
     networks:
       - app-network
     volumes:
@@ -50,10 +50,10 @@ services:
   postgres:
     image: postgres:16
     ports:
-      - "5701:5432"
+      - "5460:5432"
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=admin123
+      - POSTGRES_PASSWORD=admin834
       - POSTGRES_DB=new_employee_db
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
