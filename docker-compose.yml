@@ -6,7 +6,7 @@ services:
       context: ./Backend
       dockerfile: Dockerfile
     ports:
-      - "3601:3601"
+      - "3062:3062"
     environment:
       - PG_HOST=postgres
       - PG_USER=postgres
