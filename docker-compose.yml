@@ -28,7 +28,7 @@ services:
       context: ./Frontend
       dockerfile: Dockerfile
     ports:
-      - "8074:80"
+      - "8160:80"
     networks:
       - app-network
     volumes:
@@ -40,7 +40,7 @@ services:
       context: ./Hr_page
       dockerfile: Dockerfile
     ports:
-      - "8075:80"
+      - "8161:80"
     networks:
       - app-network
     volumes:
